@@ -9,7 +9,7 @@ export function fetchUserDetail(uid: number, callback: (user: User) => void) {
                 let username = response.data.data.username;
                 let email = response.data.data.email;
                 let user = new User(uid, username, '', email);
-                return user;
+                callback(user);
             } else {
                 return undefined;
             }
