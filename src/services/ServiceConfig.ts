@@ -1,1 +1,1 @@
-export const HTTPApiHost: string = true ? "https://mock.apifox.cn/m1/1438319-0-default" : "https://project.domain.com";
+export const HTTPApiHost: string = true ? "https://mon3tr.lykorisr.fun" : "https://127.0.0.1:2333";
