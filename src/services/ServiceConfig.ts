@@ -1,1 +1,0 @@
-export const HTTPApiHost: string = true ? "https://mon3tr.lykorisr.fun" : "https://127.0.0.1:2333";
