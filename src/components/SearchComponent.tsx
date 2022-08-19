@@ -1,14 +1,16 @@
 import {Button, Card, Grid, Input} from "@geist-ui/core";
 import {Globe, Package, PenTool, Search} from "@geist-ui/icons";
 import {useRecoilValue, useSetRecoilState} from "recoil";
-import {searchKeyWordState} from "../state/SearchStates";
+import {searchKeyWordState, searchTypeState} from "../state/SearchStates";
 import {useNavigate} from "@tanstack/react-location";
 
 function SearchComponent() {
     const navigate = useNavigate()
     const searchKeyWord = useRecoilValue(searchKeyWordState)
     const setSearchKeyWord = useSetRecoilState(searchKeyWordState)
+    const setSearchType = useSetRecoilState(searchTypeState)
     const search = function (type: string) {
+        setSearchType(type)
         navigate({
             // 不依靠路径传递keywork，全都根据状态走
             to: "/search",

@@ -5,9 +5,14 @@ const searchKeyWordState = atom({
     default: ''
 })
 
+const searchTypeState = atom({
+    key: "searchType",
+    default: 'global'
+})
+
 const searchPagesState = atom({
     key: "searchPages",
     default: 0
 })
 
-export {searchKeyWordState, searchPagesState}
+export {searchKeyWordState, searchPagesState, searchTypeState}
